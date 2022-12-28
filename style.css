@@ -35,10 +35,21 @@ body {
   border-radius: 3px;
 }
 .shop {
+  margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(4, 223px);
   gap: 30px;
   justify-content: center;
+}
+@media (max-width: 1000px) {
+  .shop {
+    grid-template-columns: repeat(2, 223px);
+  }
+}
+@media (max-width: 550px) {
+  .shop {
+    grid-template-columns: repeat(1, 223px);
+  }
 }
 .item {
   border: 2px solid #212529;
@@ -53,4 +64,22 @@ body {
 .price-quantity {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 16px;
+}
+i {
+  cursor: pointer;
+}
+.bi-dash,
+.bi-plus {
+  color: #52751e;
+}
+.bi-dash:hover,
+.bi-plus:hover {
+  font-size: 1rem;
 }
